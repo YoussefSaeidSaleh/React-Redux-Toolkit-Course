@@ -12,7 +12,7 @@ const icecreamSlice = createSlice({
     ordered: (state) => {
       state.numberOfIcecreams--;
     },
-    reStoked: (state, action) => {
+    reStocked: (state, action) => {
       state.numberOfIcecreams += action.payload;
     },
   },
@@ -30,4 +30,4 @@ const icecreamSlice = createSlice({
 
 export default icecreamSlice.reducer;
 
-export const icecreamActions = icecreamSlice.actions;
+export const { ordered, reStocked } = icecreamSlice.actions;
